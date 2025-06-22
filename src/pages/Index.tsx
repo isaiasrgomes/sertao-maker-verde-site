@@ -1,12 +1,13 @@
-
 import { useState, useEffect } from 'react';
-import { ArrowRight, CheckCircle, Users, Lightbulb, Target, Mail, Phone, MapPin, Menu, X } from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Lightbulb, Target, Mail, Phone, MapPin, Menu, X, Filter, Search, Globe, Cpu, Leaf, GraduationCap, Smartphone, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('todas');
 
   useEffect(() => {
     setIsVisible(true);
@@ -41,23 +42,128 @@ const Index = () => {
     }
   ];
 
-  const startups = [
+  const incubationProcess = [
+    {
+      icon: Lightbulb,
+      title: "Ideação",
+      description: "Desenvolvimento e validação da ideia de negócio"
+    },
+    {
+      icon: Users,
+      title: "Mentoria",
+      description: "Acompanhamento especializado com mentores experientes"
+    },
+    {
+      icon: Target,
+      title: "Desenvolvimento",
+      description: "Criação do MVP e refinamento do produto"
+    },
+    {
+      icon: Globe,
+      title: "Lançamento",
+      description: "Entrada no mercado e escalabilidade"
+    }
+  ];
+
+  const teamMembers = [
+    {
+      name: "Maria Silva",
+      role: "Diretora Executiva",
+      description: "15 anos de experiência em inovação e empreendedorismo no nordeste",
+      image: "https://images.unsplash.com/photo-1494790108755-2616c4e9a9e3?w=400&h=400&fit=crop&crop=face"
+    },
+    {
+      name: "João Santos",
+      role: "Diretor de Investimentos",
+      description: "Ex-executivo de venture capital com foco em startups de impacto social",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+    },
+    {
+      name: "Ana Costa",
+      role: "Gerente de Programas",
+      description: "Especialista em aceleração de negócios e desenvolvimento de ecossistemas",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
+    },
+    {
+      name: "Carlos Oliveira",
+      role: "Mentor Sênior",
+      description: "Empreendedor serial com 3 exits bem-sucedidos em startups de tecnologia",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+    }
+  ];
+
+  const allStartups = [
     {
       name: "AgroTech Sertão",
       description: "Soluções tecnológicas para agricultura sustentável no semiárido",
-      stage: "Série A"
+      stage: "Série A",
+      category: "agtech",
+      logo: "🌱"
     },
     {
       name: "EduMaker",
       description: "Plataforma de educação digital para comunidades rurais",
-      stage: "Seed"
+      stage: "Seed",
+      category: "edtech",
+      logo: "📚"
     },
     {
       name: "SolarSertão",
       description: "Energia solar acessível para pequenos produtores",
-      stage: "Pré-Seed"
+      stage: "Pré-Seed",
+      category: "energia",
+      logo: "☀️"
+    },
+    {
+      name: "HealthConnect",
+      description: "Telemedicina especializada para regiões remotas do sertão",
+      stage: "Seed",
+      category: "saude",
+      logo: "🏥"
+    },
+    {
+      name: "FinSertão",
+      description: "Soluções financeiras digitais para pequenos empreendedores",
+      stage: "Série A",
+      category: "fintech",
+      logo: "💰"
+    },
+    {
+      name: "EcoWaste",
+      description: "Gestão inteligente de resíduos sólidos urbanos",
+      stage: "Pré-Seed",
+      category: "sustentabilidade",
+      logo: "♻️"
+    },
+    {
+      name: "SmartIrriga",
+      description: "Sistema IoT para irrigação inteligente",
+      stage: "Seed",
+      category: "agtech",
+      logo: "💧"
+    },
+    {
+      name: "TechLearn",
+      description: "Cursos técnicos online com certificação digital",
+      stage: "Pré-Seed",
+      category: "edtech",
+      logo: "🎓"
     }
   ];
+
+  const categories = [
+    { value: 'todas', label: 'Todas as categorias', icon: Globe },
+    { value: 'agtech', label: 'AgTech', icon: Leaf },
+    { value: 'edtech', label: 'EdTech', icon: GraduationCap },
+    { value: 'fintech', label: 'FinTech', icon: Smartphone },
+    { value: 'saude', label: 'Saúde', icon: Heart },
+    { value: 'energia', label: 'Energia', icon: Cpu },
+    { value: 'sustentabilidade', label: 'Sustentabilidade', icon: Leaf }
+  ];
+
+  const filteredStartups = selectedCategory === 'todas' 
+    ? allStartups 
+    : allStartups.filter(startup => startup.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-white">
@@ -77,8 +183,11 @@ const Index = () => {
               <button onClick={() => scrollToSection('programas')} className="text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
                 Programas
               </button>
-              <button onClick={() => scrollToSection('portfolio')} className="text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
-                Portfolio
+              <button onClick={() => scrollToSection('equipe')} className="text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
+                Equipe
+              </button>
+              <button onClick={() => scrollToSection('startups')} className="text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
+                Startups
               </button>
               <button onClick={() => scrollToSection('contato')} className="text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
                 Contato
@@ -104,8 +213,11 @@ const Index = () => {
                 <button onClick={() => scrollToSection('programas')} className="text-left text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
                   Programas
                 </button>
-                <button onClick={() => scrollToSection('portfolio')} className="text-left text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
-                  Portfolio
+                <button onClick={() => scrollToSection('equipe')} className="text-left text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
+                  Equipe
+                </button>
+                <button onClick={() => scrollToSection('startups')} className="text-left text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
+                  Startups
                 </button>
                 <button onClick={() => scrollToSection('contato')} className="text-left text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
                   Contato
@@ -117,8 +229,15 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-green-sertao-50 to-white">
-        <div className="container mx-auto px-4">
+      <section className="pt-20 pb-16 bg-gradient-to-br from-green-sertao-50 to-white relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop')`
+          }}
+        />
+        <div className="container mx-auto px-4 relative">
           <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
             <h1 className="text-4xl md:text-6xl font-bold text-green-sertao-800 mb-6">
               Cultivando o
@@ -207,6 +326,27 @@ const Index = () => {
               </Card>
             </div>
 
+            {/* Incubation Process */}
+            <div className="mb-12">
+              <h3 className="text-2xl md:text-3xl font-bold text-green-sertao-800 mb-8 text-center">
+                Processo de Incubação
+              </h3>
+              <div className="grid md:grid-cols-4 gap-6">
+                {incubationProcess.map((step, index) => (
+                  <div key={index} className="text-center relative">
+                    <div className="w-20 h-20 bg-green-sertao-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <step.icon className="h-10 w-10 text-white" />
+                    </div>
+                    <h4 className="text-lg font-semibold text-green-sertao-800 mb-2">{step.title}</h4>
+                    <p className="text-green-sertao-600 text-sm">{step.description}</p>
+                    {index < incubationProcess.length - 1 && (
+                      <ArrowRight className="h-6 w-6 text-green-sertao-400 absolute top-8 -right-3 hidden md:block" />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <div className="bg-green-sertao-50 rounded-2xl p-8 md:p-12">
               <div className="grid md:grid-cols-4 gap-8 text-center">
                 <div>
@@ -276,25 +416,93 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-16 bg-white">
+      {/* Team Section */}
+      <section id="equipe" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-green-sertao-800 mb-4">
-                Portfolio de Startups
+                Nossa Equipe
               </h2>
               <p className="text-xl text-green-sertao-600 max-w-3xl mx-auto">
-                Conheça algumas das startups que estão revolucionando o sertão com inovação e tecnologia.
+                Conheça os profissionais apaixonados que lideram a transformação do ecossistema empreendedor do sertão.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {startups.map((startup, index) => (
-                <Card key={index} className="border-green-sertao-200 hover:shadow-lg transition-shadow">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {teamMembers.map((member, index) => (
+                <Card key={index} className="border-green-sertao-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <CardHeader className="text-center">
+                    <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <CardTitle className="text-green-sertao-800 text-lg">{member.name}</CardTitle>
+                    <CardDescription className="text-green-sertao-600 font-semibold">
+                      {member.role}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-green-sertao-600 text-sm text-center">
+                      {member.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Startups Section */}
+      <section id="startups" className="py-16 bg-green-sertao-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-green-sertao-800 mb-4">
+                Startups Incubadas
+              </h2>
+              <p className="text-xl text-green-sertao-600 max-w-3xl mx-auto">
+                Explore nosso portfólio de startups inovadoras que estão transformando diversos setores no sertão.
+              </p>
+            </div>
+
+            {/* Filter Section */}
+            <div className="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Filter className="h-5 w-5 text-green-sertao-600" />
+                <span className="text-green-sertao-700 font-semibold">Filtrar por categoria:</span>
+              </div>
+              <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+                <SelectTrigger className="w-full md:w-64 border-green-sertao-300">
+                  <SelectValue placeholder="Selecione uma categoria" />
+                </SelectTrigger>
+                <SelectContent>
+                  {categories.map((category) => (
+                    <SelectItem key={category.value} value={category.value}>
+                      <div className="flex items-center gap-2">
+                        <category.icon className="h-4 w-4" />
+                        {category.label}
+                      </div>
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* Startups Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredStartups.map((startup, index) => (
+                <Card key={index} className="bg-white border-green-sertao-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <CardHeader>
-                    <div className="flex justify-between items-start mb-2">
-                      <CardTitle className="text-green-sertao-800">{startup.name}</CardTitle>
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-3">
+                        <div className="text-2xl">{startup.logo}</div>
+                        <CardTitle className="text-green-sertao-800 text-lg">{startup.name}</CardTitle>
+                      </div>
                       <span className="text-xs font-semibold bg-green-sertao-100 text-green-sertao-700 px-2 py-1 rounded">
                         {startup.stage}
                       </span>
@@ -303,16 +511,27 @@ const Index = () => {
                       {startup.description}
                     </CardDescription>
                   </CardHeader>
+                  <CardContent>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-green-sertao-500 capitalize">
+                        {categories.find(cat => cat.value === startup.category)?.label || startup.category}
+                      </span>
+                      <Button variant="outline" size="sm" className="border-green-sertao-600 text-green-sertao-600 hover:bg-green-sertao-50">
+                        Ver mais
+                      </Button>
+                    </div>
+                  </CardContent>
                 </Card>
               ))}
             </div>
 
-            <div className="text-center mt-12">
-              <Button variant="outline" className="border-green-sertao-600 text-green-sertao-600 hover:bg-green-sertao-50">
-                Ver todos os cases de sucesso
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
+            {filteredStartups.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-green-sertao-600 text-lg">
+                  Nenhuma startup encontrada para esta categoria.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -390,7 +609,8 @@ const Index = () => {
                 <ul className="space-y-2 text-green-sertao-200">
                   <li><button onClick={() => scrollToSection('sobre')} className="hover:text-white transition-colors">Sobre</button></li>
                   <li><button onClick={() => scrollToSection('programas')} className="hover:text-white transition-colors">Programas</button></li>
-                  <li><button onClick={() => scrollToSection('portfolio')} className="hover:text-white transition-colors">Portfolio</button></li>
+                  <li><button onClick={() => scrollToSection('equipe')} className="hover:text-white transition-colors">Equipe</button></li>
+                  <li><button onClick={() => scrollToSection('startups')} className="hover:text-white transition-colors">Startups</button></li>
                   <li><button onClick={() => scrollToSection('contato')} className="hover:text-white transition-colors">Contato</button></li>
                 </ul>
               </div>
