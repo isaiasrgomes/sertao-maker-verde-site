@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle, Users, Lightbulb, Target, Mail, Phone, MapPin, Menu, X, Filter, Search, Globe, Cpu, Leaf, GraduationCap, Smartphone, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -166,37 +167,37 @@ const Index = () => {
     : allStartups.filter(startup => startup.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-green-sertao-50">
       {/* Header */}
-      <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-green-sertao-100">
+      <header className="fixed top-0 w-full bg-green-sertao-700/95 backdrop-blur-sm z-50 border-b border-green-sertao-600">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold text-green-sertao-700">
+            <div className="text-2xl font-bold text-white">
               Sertão Maker
             </div>
             
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
-              <button onClick={() => scrollToSection('sobre')} className="text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
+              <button onClick={() => scrollToSection('sobre')} className="text-green-sertao-100 hover:text-white transition-colors">
                 Sobre
               </button>
-              <button onClick={() => scrollToSection('programas')} className="text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
+              <button onClick={() => scrollToSection('programas')} className="text-green-sertao-100 hover:text-white transition-colors">
                 Programas
               </button>
-              <button onClick={() => scrollToSection('equipe')} className="text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
+              <button onClick={() => scrollToSection('equipe')} className="text-green-sertao-100 hover:text-white transition-colors">
                 Equipe
               </button>
-              <button onClick={() => scrollToSection('startups')} className="text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
+              <button onClick={() => scrollToSection('startups')} className="text-green-sertao-100 hover:text-white transition-colors">
                 Startups
               </button>
-              <button onClick={() => scrollToSection('contato')} className="text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
+              <button onClick={() => scrollToSection('contato')} className="text-green-sertao-100 hover:text-white transition-colors">
                 Contato
               </button>
             </nav>
 
             {/* Mobile Menu Button */}
             <button 
-              className="md:hidden text-green-sertao-600"
+              className="md:hidden text-white"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -205,21 +206,21 @@ const Index = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <nav className="md:hidden mt-4 pb-4 border-t border-green-sertao-100 pt-4">
+            <nav className="md:hidden mt-4 pb-4 border-t border-green-sertao-600 pt-4">
               <div className="flex flex-col space-y-3">
-                <button onClick={() => scrollToSection('sobre')} className="text-left text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
+                <button onClick={() => scrollToSection('sobre')} className="text-left text-green-sertao-100 hover:text-white transition-colors">
                   Sobre
                 </button>
-                <button onClick={() => scrollToSection('programas')} className="text-left text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
+                <button onClick={() => scrollToSection('programas')} className="text-left text-green-sertao-100 hover:text-white transition-colors">
                   Programas
                 </button>
-                <button onClick={() => scrollToSection('equipe')} className="text-left text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
+                <button onClick={() => scrollToSection('equipe')} className="text-left text-green-sertao-100 hover:text-white transition-colors">
                   Equipe
                 </button>
-                <button onClick={() => scrollToSection('startups')} className="text-left text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
+                <button onClick={() => scrollToSection('startups')} className="text-left text-green-sertao-100 hover:text-white transition-colors">
                   Startups
                 </button>
-                <button onClick={() => scrollToSection('contato')} className="text-left text-green-sertao-600 hover:text-green-sertao-700 transition-colors">
+                <button onClick={() => scrollToSection('contato')} className="text-left text-green-sertao-100 hover:text-white transition-colors">
                   Contato
                 </button>
               </div>
@@ -229,28 +230,28 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-green-sertao-50 to-white relative overflow-hidden">
+      <section className="pt-20 pb-16 bg-gradient-to-br from-green-sertao-600 via-green-sertao-500 to-green-sertao-700 relative overflow-hidden">
         {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop')`
           }}
         />
         <div className="container mx-auto px-4 relative">
           <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-            <h1 className="text-4xl md:text-6xl font-bold text-green-sertao-800 mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cultivando o
-              <span className="text-green-sertao-600"> Futuro </span>
+              <span className="text-green-sertao-200"> Futuro </span>
               do Sertão
             </h1>
-            <p className="text-xl md:text-2xl text-green-sertao-600 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-green-sertao-100 mb-8 leading-relaxed">
               A primeira incubadora de startups do sertão nordestino, transformando ideias inovadoras em negócios prósperos que impactam nossa região.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg"
-                className="bg-green-sertao-600 hover:bg-green-sertao-700 text-white px-8 py-3 text-lg"
+                className="bg-white text-green-sertao-700 hover:bg-green-sertao-50 px-8 py-3 text-lg font-semibold"
                 onClick={() => scrollToSection('programas')}
               >
                 Conheça nossos programas
@@ -259,7 +260,7 @@ const Index = () => {
               <Button 
                 variant="outline"
                 size="lg"
-                className="border-green-sertao-600 text-green-sertao-600 hover:bg-green-sertao-50 px-8 py-3 text-lg"
+                className="border-white text-white hover:bg-white/10 px-8 py-3 text-lg"
                 onClick={() => scrollToSection('sobre')}
               >
                 Saiba mais
@@ -270,7 +271,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="py-16 bg-white">
+      <section id="sobre" className="py-16 bg-gradient-to-b from-white to-green-sertao-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -331,23 +332,25 @@ const Index = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-green-sertao-800 mb-8 text-center">
                 Processo de Incubação
               </h3>
-              <div className="grid md:grid-cols-4 gap-6">
-                {incubationProcess.map((step, index) => (
-                  <div key={index} className="text-center relative">
-                    <div className="w-20 h-20 bg-green-sertao-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <step.icon className="h-10 w-10 text-white" />
+              <div className="bg-green-sertao-600 rounded-3xl p-8 md:p-12">
+                <div className="grid md:grid-cols-4 gap-6">
+                  {incubationProcess.map((step, index) => (
+                    <div key={index} className="text-center relative">
+                      <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                        <step.icon className="h-10 w-10 text-green-sertao-600" />
+                      </div>
+                      <h4 className="text-lg font-semibold text-white mb-2">{step.title}</h4>
+                      <p className="text-green-sertao-100 text-sm">{step.description}</p>
+                      {index < incubationProcess.length - 1 && (
+                        <ArrowRight className="h-6 w-6 text-green-sertao-200 absolute top-8 -right-3 hidden md:block" />
+                      )}
                     </div>
-                    <h4 className="text-lg font-semibold text-green-sertao-800 mb-2">{step.title}</h4>
-                    <p className="text-green-sertao-600 text-sm">{step.description}</p>
-                    {index < incubationProcess.length - 1 && (
-                      <ArrowRight className="h-6 w-6 text-green-sertao-400 absolute top-8 -right-3 hidden md:block" />
-                    )}
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
 
-            <div className="bg-green-sertao-50 rounded-2xl p-8 md:p-12">
+            <div className="bg-green-sertao-100 rounded-2xl p-8 md:p-12">
               <div className="grid md:grid-cols-4 gap-8 text-center">
                 <div>
                   <div className="text-3xl md:text-4xl font-bold text-green-sertao-700 mb-2">50+</div>
@@ -372,21 +375,21 @@ const Index = () => {
       </section>
 
       {/* Programs Section */}
-      <section id="programas" className="py-16 bg-green-sertao-50">
+      <section id="programas" className="py-16 bg-green-sertao-600">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-green-sertao-800 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Nossos Programas
               </h2>
-              <p className="text-xl text-green-sertao-600 max-w-3xl mx-auto">
+              <p className="text-xl text-green-sertao-100 max-w-3xl mx-auto">
                 Oferecemos programas estruturados para cada estágio do seu empreendimento, do conceito inicial até a expansão internacional.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {programs.map((program, index) => (
-                <Card key={index} className="bg-white border-green-sertao-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <Card key={index} className="bg-white border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <CardHeader>
                     <CardTitle className="text-green-sertao-800 text-xl">{program.title}</CardTitle>
                     <CardDescription className="text-green-sertao-600 text-base">
@@ -417,7 +420,7 @@ const Index = () => {
       </section>
 
       {/* Team Section */}
-      <section id="equipe" className="py-16 bg-white">
+      <section id="equipe" className="py-16 bg-gradient-to-b from-green-sertao-50 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -431,9 +434,9 @@ const Index = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {teamMembers.map((member, index) => (
-                <Card key={index} className="border-green-sertao-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <Card key={index} className="border-green-sertao-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-green-sertao-50">
                   <CardHeader className="text-center">
-                    <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                    <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-green-sertao-200">
                       <img 
                         src={member.image} 
                         alt={member.name}
@@ -458,26 +461,26 @@ const Index = () => {
       </section>
 
       {/* Startups Section */}
-      <section id="startups" className="py-16 bg-green-sertao-50">
+      <section id="startups" className="py-16 bg-green-sertao-700">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-green-sertao-800 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Startups Incubadas
               </h2>
-              <p className="text-xl text-green-sertao-600 max-w-3xl mx-auto">
+              <p className="text-xl text-green-sertao-100 max-w-3xl mx-auto">
                 Explore nosso portfólio de startups inovadoras que estão transformando diversos setores no sertão.
               </p>
             </div>
 
             {/* Filter Section */}
-            <div className="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+            <div className="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between bg-green-sertao-600 rounded-lg p-4">
               <div className="flex items-center gap-2">
-                <Filter className="h-5 w-5 text-green-sertao-600" />
-                <span className="text-green-sertao-700 font-semibold">Filtrar por categoria:</span>
+                <Filter className="h-5 w-5 text-white" />
+                <span className="text-white font-semibold">Filtrar por categoria:</span>
               </div>
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                <SelectTrigger className="w-full md:w-64 border-green-sertao-300">
+                <SelectTrigger className="w-full md:w-64 border-green-sertao-500 bg-white">
                   <SelectValue placeholder="Selecione uma categoria" />
                 </SelectTrigger>
                 <SelectContent>
@@ -496,11 +499,11 @@ const Index = () => {
             {/* Startups Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredStartups.map((startup, index) => (
-                <Card key={index} className="bg-white border-green-sertao-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <Card key={index} className="bg-white border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-3">
-                        <div className="text-2xl">{startup.logo}</div>
+                        <div className="text-2xl bg-green-sertao-100 p-2 rounded-full">{startup.logo}</div>
                         <CardTitle className="text-green-sertao-800 text-lg">{startup.name}</CardTitle>
                       </div>
                       <span className="text-xs font-semibold bg-green-sertao-100 text-green-sertao-700 px-2 py-1 rounded">
@@ -513,7 +516,7 @@ const Index = () => {
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-green-sertao-500 capitalize">
+                      <span className="text-sm text-green-sertao-500 capitalize font-medium bg-green-sertao-50 px-2 py-1 rounded">
                         {categories.find(cat => cat.value === startup.category)?.label || startup.category}
                       </span>
                       <Button variant="outline" size="sm" className="border-green-sertao-600 text-green-sertao-600 hover:bg-green-sertao-50">
@@ -527,7 +530,7 @@ const Index = () => {
 
             {filteredStartups.length === 0 && (
               <div className="text-center py-12">
-                <p className="text-green-sertao-600 text-lg">
+                <p className="text-green-sertao-100 text-lg">
                   Nenhuma startup encontrada para esta categoria.
                 </p>
               </div>
@@ -537,35 +540,35 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contato" className="py-16 bg-green-sertao-50">
+      <section id="contato" className="py-16 bg-gradient-to-br from-green-sertao-600 to-green-sertao-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-green-sertao-800 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Fale Conosco
               </h2>
-              <p className="text-xl text-green-sertao-600">
+              <p className="text-xl text-green-sertao-100">
                 Está pronto para fazer parte da revolução empreendedora do sertão? Entre em contato conosco!
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="bg-white border-green-sertao-200">
+              <Card className="bg-white/10 backdrop-blur-sm border-green-sertao-500 text-white">
                 <CardHeader>
-                  <CardTitle className="text-green-sertao-800">Informações de Contato</CardTitle>
+                  <CardTitle className="text-white">Informações de Contato</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="flex items-center">
-                    <Mail className="h-5 w-5 text-green-sertao-600 mr-3" />
-                    <span className="text-green-sertao-700">contato@sertaomaker.com.br</span>
+                    <Mail className="h-5 w-5 text-green-sertao-200 mr-3" />
+                    <span className="text-green-sertao-100">contato@sertaomaker.com.br</span>
                   </div>
                   <div className="flex items-center">
-                    <Phone className="h-5 w-5 text-green-sertao-600 mr-3" />
-                    <span className="text-green-sertao-700">(87) 9 9999-9999</span>
+                    <Phone className="h-5 w-5 text-green-sertao-200 mr-3" />
+                    <span className="text-green-sertao-100">(87) 9 9999-9999</span>
                   </div>
                   <div className="flex items-start">
-                    <MapPin className="h-5 w-5 text-green-sertao-600 mr-3 mt-1" />
-                    <span className="text-green-sertao-700">
+                    <MapPin className="h-5 w-5 text-green-sertao-200 mr-3 mt-1" />
+                    <span className="text-green-sertao-100">
                       Rua da Inovação, 123<br />
                       Centro - Petrolina, PE<br />
                       CEP: 56300-000
@@ -574,15 +577,15 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-white border-green-sertao-200">
+              <Card className="bg-white/10 backdrop-blur-sm border-green-sertao-500 text-white">
                 <CardHeader>
-                  <CardTitle className="text-green-sertao-800">Candidature-se</CardTitle>
+                  <CardTitle className="text-white">Candidature-se</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-green-sertao-600 mb-6">
+                  <p className="text-green-sertao-100 mb-6">
                     Tem uma ideia inovadora? Candidate-se aos nossos programas e faça parte do ecossistema Sertão Maker.
                   </p>
-                  <Button className="w-full bg-green-sertao-600 hover:bg-green-sertao-700 text-white">
+                  <Button className="w-full bg-white text-green-sertao-700 hover:bg-green-sertao-50 font-semibold">
                     Inscrever-se nos Programas
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -594,7 +597,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-green-sertao-800 text-white py-12">
+      <footer className="bg-green-sertao-900 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8">
@@ -624,7 +627,7 @@ const Index = () => {
                 </ul>
               </div>
             </div>
-            <div className="border-t border-green-sertao-700 mt-8 pt-8 text-center text-green-sertao-200">
+            <div className="border-t border-green-sertao-800 mt-8 pt-8 text-center text-green-sertao-200">
               <p>&copy; 2024 Sertão Maker. Todos os direitos reservados.</p>
             </div>
           </div>
