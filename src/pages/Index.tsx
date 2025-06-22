@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle, Users, Lightbulb, Target, Mail, Phone, MapPin, Menu, X, Filter, Search, Globe, Cpu, Leaf, GraduationCap, Smartphone, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -167,7 +166,7 @@ const Index = () => {
     : allStartups.filter(startup => startup.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-green-sertao-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="fixed top-0 w-full bg-green-sertao-700/95 backdrop-blur-sm z-50 border-b border-green-sertao-600">
         <div className="container mx-auto px-4 py-4">
@@ -271,56 +270,56 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="py-16 bg-gradient-to-b from-white to-green-sertao-50">
+      <section id="sobre" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-green-sertao-800 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 Sobre a Sertão Maker
               </h2>
-              <p className="text-xl text-green-sertao-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Nascemos da convicção de que o sertão brasileiro tem potencial imenso para gerar inovação e empreendedorismo de impacto.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <Card className="border-green-sertao-200 hover:shadow-lg transition-shadow">
+              <Card className="border-gray-200 hover:shadow-lg transition-shadow">
                 <CardHeader className="text-center">
                   <div className="w-16 h-16 bg-green-sertao-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Target className="h-8 w-8 text-green-sertao-600" />
                   </div>
-                  <CardTitle className="text-green-sertao-800">Nossa Missão</CardTitle>
+                  <CardTitle className="text-gray-800">Nossa Missão</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-green-sertao-600 text-center">
+                  <p className="text-gray-600 text-center">
                     Fomentar o ecossistema de inovação no sertão, conectando empreendedores, investidores e recursos para criar soluções que transformem nossa região.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-green-sertao-200 hover:shadow-lg transition-shadow">
+              <Card className="border-gray-200 hover:shadow-lg transition-shadow">
                 <CardHeader className="text-center">
                   <div className="w-16 h-16 bg-green-sertao-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Lightbulb className="h-8 w-8 text-green-sertao-600" />
                   </div>
-                  <CardTitle className="text-green-sertao-800">Nossa Visão</CardTitle>
+                  <CardTitle className="text-gray-800">Nossa Visão</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-green-sertao-600 text-center">
+                  <p className="text-gray-600 text-center">
                     Ser reconhecida como o principal hub de inovação do sertão, gerando startups que solucionem os desafios regionais e globais.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-green-sertao-200 hover:shadow-lg transition-shadow">
+              <Card className="border-gray-200 hover:shadow-lg transition-shadow">
                 <CardHeader className="text-center">
                   <div className="w-16 h-16 bg-green-sertao-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="h-8 w-8 text-green-sertao-600" />
                   </div>
-                  <CardTitle className="text-green-sertao-800">Nossos Valores</CardTitle>
+                  <CardTitle className="text-gray-800">Nossos Valores</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-green-sertao-600 text-center">
+                  <p className="text-gray-600 text-center">
                     Colaboração, sustentabilidade, inovação social e valorização da cultura sertaneja como pilares do nosso trabalho.
                   </p>
                 </CardContent>
@@ -329,7 +328,7 @@ const Index = () => {
 
             {/* Incubation Process */}
             <div className="mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold text-green-sertao-800 mb-8 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">
                 Processo de Incubação
               </h3>
               <div className="bg-green-sertao-600 rounded-3xl p-8 md:p-12">
@@ -340,7 +339,7 @@ const Index = () => {
                         <step.icon className="h-10 w-10 text-green-sertao-600" />
                       </div>
                       <h4 className="text-lg font-semibold text-white mb-2">{step.title}</h4>
-                      <p className="text-green-sertao-100 text-sm">{step.description}</p>
+                      <p className="text-gray-100 text-sm">{step.description}</p>
                       {index < incubationProcess.length - 1 && (
                         <ArrowRight className="h-6 w-6 text-green-sertao-200 absolute top-8 -right-3 hidden md:block" />
                       )}
@@ -350,23 +349,23 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="bg-green-sertao-100 rounded-2xl p-8 md:p-12">
+            <div className="bg-gray-100 rounded-2xl p-8 md:p-12">
               <div className="grid md:grid-cols-4 gap-8 text-center">
                 <div>
                   <div className="text-3xl md:text-4xl font-bold text-green-sertao-700 mb-2">50+</div>
-                  <div className="text-green-sertao-600">Startups Incubadas</div>
+                  <div className="text-gray-600">Startups Incubadas</div>
                 </div>
                 <div>
                   <div className="text-3xl md:text-4xl font-bold text-green-sertao-700 mb-2">R$ 12M</div>
-                  <div className="text-green-sertao-600">Investimento Captado</div>
+                  <div className="text-gray-600">Investimento Captado</div>
                 </div>
                 <div>
                   <div className="text-3xl md:text-4xl font-bold text-green-sertao-700 mb-2">200+</div>
-                  <div className="text-green-sertao-600">Empregos Gerados</div>
+                  <div className="text-gray-600">Empregos Gerados</div>
                 </div>
                 <div>
                   <div className="text-3xl md:text-4xl font-bold text-green-sertao-700 mb-2">85%</div>
-                  <div className="text-green-sertao-600">Taxa de Sucesso</div>
+                  <div className="text-gray-600">Taxa de Sucesso</div>
                 </div>
               </div>
             </div>
@@ -375,24 +374,24 @@ const Index = () => {
       </section>
 
       {/* Programs Section */}
-      <section id="programas" className="py-16 bg-green-sertao-600">
+      <section id="programas" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 Nossos Programas
               </h2>
-              <p className="text-xl text-green-sertao-100 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Oferecemos programas estruturados para cada estágio do seu empreendimento, do conceito inicial até a expansão internacional.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {programs.map((program, index) => (
-                <Card key={index} className="bg-white border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <Card key={index} className="bg-white border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <CardHeader>
-                    <CardTitle className="text-green-sertao-800 text-xl">{program.title}</CardTitle>
-                    <CardDescription className="text-green-sertao-600 text-base">
+                    <CardTitle className="text-gray-800 text-xl">{program.title}</CardTitle>
+                    <CardDescription className="text-gray-600 text-base">
                       {program.description}
                     </CardDescription>
                     <div className="text-sm font-semibold text-green-sertao-700 bg-green-sertao-100 px-3 py-1 rounded-full w-fit">
@@ -402,7 +401,7 @@ const Index = () => {
                   <CardContent>
                     <ul className="space-y-3">
                       {program.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-green-sertao-600">
+                        <li key={featureIndex} className="flex items-center text-gray-600">
                           <CheckCircle className="h-5 w-5 text-green-sertao-500 mr-3 flex-shrink-0" />
                           {feature}
                         </li>
@@ -420,36 +419,36 @@ const Index = () => {
       </section>
 
       {/* Team Section */}
-      <section id="equipe" className="py-16 bg-gradient-to-b from-green-sertao-50 to-white">
+      <section id="equipe" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-green-sertao-800 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 Nossa Equipe
               </h2>
-              <p className="text-xl text-green-sertao-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Conheça os profissionais apaixonados que lideram a transformação do ecossistema empreendedor do sertão.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {teamMembers.map((member, index) => (
-                <Card key={index} className="border-green-sertao-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-green-sertao-50">
+                <Card key={index} className="border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-gray-50">
                   <CardHeader className="text-center">
-                    <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-green-sertao-200">
+                    <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-gray-200">
                       <img 
                         src={member.image} 
                         alt={member.name}
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <CardTitle className="text-green-sertao-800 text-lg">{member.name}</CardTitle>
-                    <CardDescription className="text-green-sertao-600 font-semibold">
+                    <CardTitle className="text-gray-800 text-lg">{member.name}</CardTitle>
+                    <CardDescription className="text-gray-600 font-semibold">
                       {member.role}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-green-sertao-600 text-sm text-center">
+                    <p className="text-gray-600 text-sm text-center">
                       {member.description}
                     </p>
                   </CardContent>
@@ -461,26 +460,26 @@ const Index = () => {
       </section>
 
       {/* Startups Section */}
-      <section id="startups" className="py-16 bg-green-sertao-700">
+      <section id="startups" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 Startups Incubadas
               </h2>
-              <p className="text-xl text-green-sertao-100 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Explore nosso portfólio de startups inovadoras que estão transformando diversos setores no sertão.
               </p>
             </div>
 
             {/* Filter Section */}
-            <div className="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between bg-green-sertao-600 rounded-lg p-4">
+            <div className="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between bg-gray-100 rounded-lg p-4">
               <div className="flex items-center gap-2">
-                <Filter className="h-5 w-5 text-white" />
-                <span className="text-white font-semibold">Filtrar por categoria:</span>
+                <Filter className="h-5 w-5 text-gray-700" />
+                <span className="text-gray-700 font-semibold">Filtrar por categoria:</span>
               </div>
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                <SelectTrigger className="w-full md:w-64 border-green-sertao-500 bg-white">
+                <SelectTrigger className="w-full md:w-64 border-gray-300 bg-white">
                   <SelectValue placeholder="Selecione uma categoria" />
                 </SelectTrigger>
                 <SelectContent>
@@ -499,24 +498,24 @@ const Index = () => {
             {/* Startups Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredStartups.map((startup, index) => (
-                <Card key={index} className="bg-white border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <Card key={index} className="bg-white border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-3">
-                        <div className="text-2xl bg-green-sertao-100 p-2 rounded-full">{startup.logo}</div>
-                        <CardTitle className="text-green-sertao-800 text-lg">{startup.name}</CardTitle>
+                        <div className="text-2xl bg-gray-100 p-2 rounded-full">{startup.logo}</div>
+                        <CardTitle className="text-gray-800 text-lg">{startup.name}</CardTitle>
                       </div>
                       <span className="text-xs font-semibold bg-green-sertao-100 text-green-sertao-700 px-2 py-1 rounded">
                         {startup.stage}
                       </span>
                     </div>
-                    <CardDescription className="text-green-sertao-600">
+                    <CardDescription className="text-gray-600">
                       {startup.description}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-green-sertao-500 capitalize font-medium bg-green-sertao-50 px-2 py-1 rounded">
+                      <span className="text-sm text-gray-500 capitalize font-medium bg-gray-100 px-2 py-1 rounded">
                         {categories.find(cat => cat.value === startup.category)?.label || startup.category}
                       </span>
                       <Button variant="outline" size="sm" className="border-green-sertao-600 text-green-sertao-600 hover:bg-green-sertao-50">
@@ -530,7 +529,7 @@ const Index = () => {
 
             {filteredStartups.length === 0 && (
               <div className="text-center py-12">
-                <p className="text-green-sertao-100 text-lg">
+                <p className="text-gray-600 text-lg">
                   Nenhuma startup encontrada para esta categoria.
                 </p>
               </div>
@@ -597,19 +596,19 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-green-sertao-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8">
               <div className="md:col-span-2">
                 <h3 className="text-2xl font-bold mb-4">Sertão Maker</h3>
-                <p className="text-green-sertao-200 mb-4">
+                <p className="text-gray-300 mb-4">
                   Cultivando o futuro do sertão através da inovação e do empreendedorismo sustentável.
                 </p>
               </div>
               <div>
                 <h4 className="font-semibold mb-4">Links Úteis</h4>
-                <ul className="space-y-2 text-green-sertao-200">
+                <ul className="space-y-2 text-gray-300">
                   <li><button onClick={() => scrollToSection('sobre')} className="hover:text-white transition-colors">Sobre</button></li>
                   <li><button onClick={() => scrollToSection('programas')} className="hover:text-white transition-colors">Programas</button></li>
                   <li><button onClick={() => scrollToSection('equipe')} className="hover:text-white transition-colors">Equipe</button></li>
@@ -619,7 +618,7 @@ const Index = () => {
               </div>
               <div>
                 <h4 className="font-semibold mb-4">Programas</h4>
-                <ul className="space-y-2 text-green-sertao-200">
+                <ul className="space-y-2 text-gray-300">
                   <li>Pré-Incubação</li>
                   <li>Incubação</li>
                   <li>Aceleração</li>
@@ -627,7 +626,7 @@ const Index = () => {
                 </ul>
               </div>
             </div>
-            <div className="border-t border-green-sertao-800 mt-8 pt-8 text-center text-green-sertao-200">
+            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-300">
               <p>&copy; 2024 Sertão Maker. Todos os direitos reservados.</p>
             </div>
           </div>
