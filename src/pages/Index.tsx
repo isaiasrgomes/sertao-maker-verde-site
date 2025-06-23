@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle, Users, Lightbulb, Target, Mail, Phone, MapPin, Menu, X, Filter, Search, Globe, Cpu, Leaf, GraduationCap, Smartphone, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -21,6 +20,42 @@ const Index = () => {
     }
     setIsMenuOpen(false);
   };
+
+  // Componente do ícone cacto com lâmpada
+  const CactusLightIcon = () => (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Base do vaso */}
+      <rect x="12" y="26" width="8" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      
+      {/* Tronco principal do cacto */}
+      <rect x="14" y="18" width="4" height="8" rx="2" fill="currentColor"/>
+      
+      {/* Braço esquerdo do cacto */}
+      <rect x="10" y="20" width="3" height="5" rx="1.5" fill="currentColor"/>
+      <rect x="8" y="20" width="3" height="3" rx="1.5" fill="currentColor"/>
+      
+      {/* Braço direito do cacto */}
+      <rect x="19" y="22" width="3" height="4" rx="1.5" fill="currentColor"/>
+      <rect x="21" y="22" width="3" height="3" rx="1.5" fill="currentColor"/>
+      
+      {/* Lâmpada no topo */}
+      <circle cx="16" cy="16" r="3" fill="currentColor" opacity="0.9"/>
+      <circle cx="16" cy="16" r="2" fill="white" opacity="0.7"/>
+      
+      {/* Filamento da lâmpada */}
+      <path d="M14.5 15.5 L16 16 L17.5 15.5 M15 17 L17 17" stroke="currentColor" strokeWidth="0.5" opacity="0.6"/>
+      
+      {/* Base da lâmpada */}
+      <rect x="15" y="18.5" width="2" height="1" fill="currentColor" opacity="0.7"/>
+      
+      {/* Espinhos do cacto */}
+      <circle cx="13" cy="21" r="0.5" fill="currentColor" opacity="0.6"/>
+      <circle cx="17" cy="23" r="0.5" fill="currentColor" opacity="0.6"/>
+      <circle cx="15" cy="24" r="0.5" fill="currentColor" opacity="0.6"/>
+      <circle cx="9" cy="22" r="0.3" fill="currentColor" opacity="0.6"/>
+      <circle cx="22" cy="24" r="0.3" fill="currentColor" opacity="0.6"/>
+    </svg>
+  );
 
   const programs = [
     {
@@ -173,8 +208,8 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="text-2xl font-bold text-white flex items-center">
-              <div className="w-8 h-8 bg-white rounded-full mr-3 flex items-center justify-center">
-                <span className="text-green-sertao-700 font-bold text-lg">S</span>
+              <div className="w-8 h-8 mr-3 text-white">
+                <CactusLightIcon />
               </div>
               Sertão Maker
             </div>
@@ -336,7 +371,7 @@ const Index = () => {
             </div>
 
             {/* Incubation Process */}
-            <div className="mb-16">
+            <div>
               <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">
                 Processo de <span className="text-green-sertao-600">Incubação</span>
               </h3>
@@ -623,8 +658,8 @@ const Index = () => {
             <div className="grid md:grid-cols-4 gap-8">
               <div className="md:col-span-2">
                 <div className="flex items-center mb-6">
-                  <div className="w-10 h-10 bg-green-sertao-600 rounded-full mr-4 flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">S</span>
+                  <div className="w-10 h-10 mr-4 text-green-sertao-600">
+                    <CactusLightIcon />
                   </div>
                   <h3 className="text-3xl font-bold">Sertão Maker</h3>
                 </div>
