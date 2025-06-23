@@ -71,7 +71,7 @@ const Index = () => {
       name: "Maria Silva",
       role: "Diretora Executiva",
       description: "15 anos de experiência em inovação e empreendedorismo no nordeste",
-      image: "https://images.unsplash.com/photo-1494790108755-2616c4e9a9e3?w=400&h=400&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face"
     },
     {
       name: "João Santos",
@@ -268,7 +268,7 @@ const Index = () => {
               <Button 
                 variant="outline"
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white/20 backdrop-blur-sm px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="border-2 border-white text-white hover:bg-white hover:text-green-sertao-700 backdrop-blur-sm px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 onClick={() => scrollToSection('sobre')}
               >
                 Saiba mais
@@ -280,10 +280,7 @@ const Index = () => {
 
       {/* About Section */}
       <section id="sobre" className="py-20 bg-gradient-to-b from-gray-50 to-white relative">
-        {/* Decorative wave */}
-        <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-br from-green-sertao-600 via-green-sertao-500 to-green-sertao-800 transform skew-y-1"></div>
-        
-        <div className="container mx-auto px-4 pt-8">
+        <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
@@ -357,27 +354,6 @@ const Index = () => {
                       )}
                     </div>
                   ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-gray-100 via-white to-gray-100 rounded-3xl p-8 md:p-12 shadow-xl">
-              <div className="grid md:grid-cols-4 gap-8 text-center">
-                <div className="hover:scale-105 transition-transform duration-300">
-                  <div className="text-4xl md:text-5xl font-bold text-green-sertao-700 mb-3">50+</div>
-                  <div className="text-gray-600 font-medium">Startups Incubadas</div>
-                </div>
-                <div className="hover:scale-105 transition-transform duration-300">
-                  <div className="text-4xl md:text-5xl font-bold text-green-sertao-700 mb-3">R$ 12M</div>
-                  <div className="text-gray-600 font-medium">Investimento Captado</div>
-                </div>
-                <div className="hover:scale-105 transition-transform duration-300">
-                  <div className="text-4xl md:text-5xl font-bold text-green-sertao-700 mb-3">200+</div>
-                  <div className="text-gray-600 font-medium">Empregos Gerados</div>
-                </div>
-                <div className="hover:scale-105 transition-transform duration-300">
-                  <div className="text-4xl md:text-5xl font-bold text-green-sertao-700 mb-3">85%</div>
-                  <div className="text-gray-600 font-medium">Taxa de Sucesso</div>
                 </div>
               </div>
             </div>
