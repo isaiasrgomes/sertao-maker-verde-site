@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle, Users, Lightbulb, Target, Mail, Phone, MapPin, Menu, X, Filter, Globe, Cpu, Leaf, GraduationCap, Smartphone, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -36,10 +35,10 @@ const Index = () => {
       features: ["Investimento seed", "Espaço de coworking", "Suporte jurídico"]
     },
     {
-      title: "Aceleração",
-      description: "Programa intensivo para startups prontas para expansão",
+      title: "Mentoria",
+      description: "Acompanhamento personalizado com mentores experientes do ecossistema",
       duration: "6 meses",
-      features: ["Capital de crescimento", "Conexão com investidores", "Mercados internacionais"]
+      features: ["Mentores especializados", "Sessões individuais", "Networking estratégico"]
     }
   ];
 
@@ -653,7 +652,6 @@ const Index = () => {
                 <ul className="space-y-3 text-gray-300">
                   <li className="hover:text-white transition-colors">Pré-Incubação</li>
                   <li className="hover:text-white transition-colors">Incubação</li>
-                  <li className="hover:text-white transition-colors">Aceleração</li>
                   <li className="hover:text-white transition-colors">Mentoria</li>
                 </ul>
               </div>
