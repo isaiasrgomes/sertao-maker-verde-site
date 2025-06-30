@@ -172,14 +172,13 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="text-2xl font-bold text-white flex items-center">
-              <div className="w-8 h-8 mr-3">
+              <div className="w-16 h-16">
                 <img 
                   src="/lovable-uploads/2fa9bf5d-610a-4d17-bf97-fb67f229610f.png" 
                   alt="Incubadora Sertão Maker" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              Sertão Maker
             </div>
             
             {/* Desktop Navigation */}
@@ -420,7 +419,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Startups Section - Moved above Team */}
+      {/* Startups Section */}
       <section id="startups" className="py-20 bg-gradient-to-b from-gray-50 to-white relative">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -503,7 +502,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Team Section - Moved below Startups */}
+      {/* Team Section */}
       <section id="equipe" className="py-20 bg-white relative overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -626,14 +625,13 @@ const Index = () => {
             <div className="grid md:grid-cols-4 gap-8">
               <div className="md:col-span-2">
                 <div className="flex items-center mb-6">
-                  <div className="w-10 h-10 mr-4">
+                  <div className="w-20 h-20 mr-4">
                     <img 
                       src="/lovable-uploads/2fa9bf5d-610a-4d17-bf97-fb67f229610f.png" 
                       alt="Incubadora Sertão Maker" 
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <h3 className="text-3xl font-bold">Sertão Maker</h3>
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed text-lg">
                   Cultivando o futuro do sertão através da inovação e do empreendedorismo sustentável.
