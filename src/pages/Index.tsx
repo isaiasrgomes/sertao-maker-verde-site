@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle, Users, Lightbulb, Target, Mail, Phone, MapPin, Menu, X, Filter, Globe, Cpu, Leaf, GraduationCap, Smartphone, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -172,7 +173,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="text-2xl font-bold text-white flex items-center">
-              <div className="w-24 h-24">
+              <div className="w-32 h-32">
                 <img 
                   src="/lovable-uploads/2fa9bf5d-610a-4d17-bf97-fb67f229610f.png" 
                   alt="Incubadora Sertão Maker" 
@@ -625,7 +626,7 @@ const Index = () => {
             <div className="grid md:grid-cols-4 gap-8">
               <div className="md:col-span-2">
                 <div className="flex items-center mb-6">
-                  <div className="w-32 h-32 mr-4">
+                  <div className="w-40 h-40 mr-4">
                     <img 
                       src="/lovable-uploads/2fa9bf5d-610a-4d17-bf97-fb67f229610f.png" 
                       alt="Incubadora Sertão Maker" 
