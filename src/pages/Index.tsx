@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, CheckCircle, Users, Lightbulb, Target, Mail, Phone, MapPin, Menu, X, Filter, Globe, Cpu, Leaf, GraduationCap, Smartphone, Heart } from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Lightbulb, Target, Mail, Phone, MapPin, Menu, X, Filter, Globe, Cpu, Leaf, GraduationCap, Smartphone, Heart, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -595,6 +595,18 @@ const Index = () => {
                       Centro - Petrolina, PE<br />
                       CEP: 56300-000
                     </span>
+                  </div>
+                  <div className="flex items-center group">
+                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                      <Download className="h-6 w-6 text-green-sertao-200" />
+                    </div>
+                    <a 
+                      href="/lovable-uploads/2fa9bf5d-610a-4d17-bf97-fb67f229610f.png" 
+                      download="sertao-maker-logo.png"
+                      className="text-green-sertao-100 text-lg hover:text-white transition-colors underline underline-offset-4"
+                    >
+                      Download da Logo
+                    </a>
                   </div>
                 </CardContent>
               </Card>
