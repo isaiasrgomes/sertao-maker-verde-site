@@ -13,14 +13,6 @@ const Index = () => {
     setIsVisible(true);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMenuOpen(false);
-  };
-
   const programs = [
     {
       title: "Pré-Incubação",
@@ -164,6 +156,14 @@ const Index = () => {
   const filteredStartups = selectedCategory === 'todas' 
     ? allStartups 
     : allStartups.filter(startup => startup.category === selectedCategory);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -600,13 +600,15 @@ const Index = () => {
                     <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                       <Download className="h-6 w-6 text-green-sertao-200" />
                     </div>
-                    <a 
-                      href="/lovable-uploads/2fa9bf5d-610a-4d17-bf97-fb67f229610f.png" 
-                      download="sertao-maker-logo.png"
-                      className="text-green-sertao-100 text-lg hover:text-white transition-colors underline underline-offset-4"
-                    >
-                      Download da Logo
-                    </a>
+                    <div className="text-green-sertao-100 text-lg">
+                      <p className="mb-2">Resultado preliminar já disponível!</p>
+                      <a 
+                        href="https://drive.usercontent.google.com/download?id=16STZ3iBMG3bQvAV1gZiIWXQjCPKZPohv&export=download&authuser=7&confirm=t&uuid=777a6502-1038-4fe2-baa5-79804e9a8ae7&at=AN8xHoqLnpv7NqIqm1MeaYqXXhb5:1751417639497"
+                        className="text-green-sertao-100 hover:text-white transition-colors underline underline-offset-4"
+                      >
+                        Download do Resultado
+                      </a>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
