@@ -3,10 +3,10 @@ import { Download } from 'lucide-react';
 
 export const ResultSection = () => {
   return (
-    <section className="py-8 bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 relative">
+    <section className="py-8 bg-white relative">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border border-white/20">
+          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border border-gray-200">
             <div className="flex items-center justify-center gap-4 mb-4">
               <div className="w-12 h-12 bg-gradient-to-br from-green-sertao-500 to-green-sertao-600 rounded-full flex items-center justify-center shadow-lg animate-pulse">
                 <Download className="h-6 w-6 text-white" />
