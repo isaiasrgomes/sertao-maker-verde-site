@@ -1,7 +1,6 @@
 
 import { Header } from '@/components/sections/Header';
 import { HeroSection } from '@/components/sections/HeroSection';
-import { ResultSection } from '@/components/sections/ResultSection';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { ProgramsSection } from '@/components/sections/ProgramsSection';
 import { StartupsSection } from '@/components/sections/StartupsSection';
@@ -21,7 +20,6 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header scrollToSection={scrollToSection} />
       <HeroSection scrollToSection={scrollToSection} />
-      <ResultSection />
       <AboutSection />
       <ProgramsSection />
       <StartupsSection />

@@ -18,7 +18,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
     <section className="pt-20 pb-16 bg-gradient-to-br from-green-sertao-600 via-green-sertao-500 to-green-sertao-800 relative overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop')`
         }}

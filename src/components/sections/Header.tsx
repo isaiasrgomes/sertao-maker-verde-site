@@ -18,14 +18,8 @@ export const Header = ({ scrollToSection }: HeaderProps) => {
     <header className="fixed top-0 w-full bg-gradient-to-r from-green-sertao-700 via-green-sertao-600 to-green-sertao-700 backdrop-blur-sm z-50 shadow-lg border-b border-green-sertao-500">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <div className="text-2xl font-bold text-white flex items-center">
-            <div className="w-32 h-32">
-              <img 
-                src="/lovable-uploads/2fa9bf5d-610a-4d17-bf97-fb67f229610f.png" 
-                alt="Incubadora Sertão Maker" 
-                className="w-full h-full object-contain"
-              />
-            </div>
+          <div className="text-2xl font-bold text-white">
+            Sertão Maker
           </div>
           
           {/* Desktop Navigation */}
