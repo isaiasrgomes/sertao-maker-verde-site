@@ -20,7 +20,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=1920&h=1080&fit=crop')`
+          backgroundImage: `url('https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=1920&h=1080&fit=crop')`
         }}
       />
       {/* Decorative Elements */}
