@@ -33,6 +33,9 @@ export const Header = ({ scrollToSection }: HeaderProps) => {
             <button onClick={() => handleScrollToSection('startups')} className="text-green-sertao-100 hover:text-white transition-all duration-300 hover:scale-105">
               Startups
             </button>
+            <button onClick={() => handleScrollToSection('noticias')} className="text-green-sertao-100 hover:text-white transition-all duration-300 hover:scale-105">
+              Notícias
+            </button>
             <button onClick={() => handleScrollToSection('equipe')} className="text-green-sertao-100 hover:text-white transition-all duration-300 hover:scale-105">
               Equipe
             </button>
@@ -62,6 +65,9 @@ export const Header = ({ scrollToSection }: HeaderProps) => {
               </button>
               <button onClick={() => handleScrollToSection('startups')} className="text-left text-green-sertao-100 hover:text-white transition-colors">
                 Startups
+              </button>
+              <button onClick={() => handleScrollToSection('noticias')} className="text-left text-green-sertao-100 hover:text-white transition-colors">
+                Notícias
               </button>
               <button onClick={() => handleScrollToSection('equipe')} className="text-left text-green-sertao-100 hover:text-white transition-colors">
                 Equipe

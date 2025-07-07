@@ -23,6 +23,7 @@ export const Footer = ({ scrollToSection }: FooterProps) => {
                 <li><button onClick={() => scrollToSection('sobre')} className="hover:text-white transition-colors hover:translate-x-1 transform duration-300">Sobre</button></li>
                 <li><button onClick={() => scrollToSection('programas')} className="hover:text-white transition-colors hover:translate-x-1 transform duration-300">Programas</button></li>
                 <li><button onClick={() => scrollToSection('startups')} className="hover:text-white transition-colors hover:translate-x-1 transform duration-300">Startups</button></li>
+                <li><button onClick={() => scrollToSection('noticias')} className="hover:text-white transition-colors hover:translate-x-1 transform duration-300">Notícias</button></li>
                 <li><button onClick={() => scrollToSection('equipe')} className="hover:text-white transition-colors hover:translate-x-1 transform duration-300">Equipe</button></li>
                 <li><button onClick={() => scrollToSection('contato')} className="hover:text-white transition-colors hover:translate-x-1 transform duration-300">Contato</button></li>
               </ul>

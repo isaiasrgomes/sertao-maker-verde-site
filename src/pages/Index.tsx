@@ -4,6 +4,7 @@ import { HeroSection } from '@/components/sections/HeroSection';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { ProgramsSection } from '@/components/sections/ProgramsSection';
 import { StartupsSection } from '@/components/sections/StartupsSection';
+import { NewsSection } from '@/components/sections/NewsSection';
 import { TeamSection } from '@/components/sections/TeamSection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { Footer } from '@/components/sections/Footer';
@@ -23,6 +24,7 @@ const Index = () => {
       <AboutSection />
       <ProgramsSection />
       <StartupsSection />
+      <NewsSection />
       <TeamSection />
       <ContactSection />
       <Footer scrollToSection={scrollToSection} />
